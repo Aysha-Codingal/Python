@@ -1,0 +1,15 @@
+# store birthdays
+
+friend1 = " 12/03/2011"
+friend2 = " 12/07/2013"
+friend3 = " 06/07/2019"
+friend4 = " 12/02/2024"
+friend5 = " 23/10/1989"
+friend6 = " 15/06/1982"
+
+print(friend1)
+print(friend2)
+print(friend3)
+print(friend4)
+print(friend5)
+print(friend6)
