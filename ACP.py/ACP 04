@@ -1,0 +1,68 @@
+from pptx import Presentation
+from pptx.util import Inches, Pt
+from pptx.dml.color import RGBColor
+
+# Create a new presentation object
+prs = Presentation()
+
+# Slide layouts
+title_slide_layout = prs.slide_layouts[0]
+content_slide_layout = prs.slide_layouts[1]
+
+# Colors
+background_color = RGBColor(0, 0, 0)       # black
+accent_color = RGBColor(72, 0, 72)         # dark purple
+title_color = RGBColor(255, 255, 255)      # white
+body_color = RGBColor(200, 200, 200)       # soft gray
+variable_color = RGBColor(0, 120, 255)     # blue
+number_color = RGBColor(255, 165, 0)       # orange
+
+# Slide data
+slides_content = [
+    {"title": "Algebraic Expressions", "content": "", "is_title": True},
+    {"title": "What is an Expression?", "content": "Definition: An expression is a combination of numbers, variables, and operators.\nExample: 3x + 5", "is_title": False},
+    {"title": "Terms and Coefficients", "content": "Term: each part separated by + or -\nCoefficient: the number in front of a variable\nExample: 4x + 7 → 4 (coefficient), x (variable), 7 (constant)", "is_title": False},
+    {"title": "Simplifying Expressions", "content": "Combine like terms\nExample: 3x + 5x = 8x", "is_title": False},
+    {"title": "Solving Equations", "content": "Isolate variable to find value\nExample: 2x + 3 = 7 → x = 2", "is_title": False},
+    {"title": "Summary & Key Points", "content": "Expressions: combination of numbers & variables\nTerms & coefficients are key parts\nSimplifying: combine like terms\nSolving equations: isolate variable", "is_title": False}
+]
+
+# Add slides with styling
+for slide_info in slides_content:
+    layout = title_slide_layout if slide_info["is_title"] else content_slide_layout
+    slide = prs.slides.add_slide(layout)
+    
+    # Background color
+    fill = slide.background.fill
+    fill.solid()
+    fill.fore_color.rgb = background_color
+    
+    # Accent bar for content slides
+    if not slide_info["is_title"]:
+        left = top = Inches(0)
+        width = prs.slide_width
+        height = Inches(0.3)
+        shape = slide.shapes.add_shape(1, left, top, width, height)  # rectangle
+        shape.fill.solid()
+        shape.fill.fore_color.rgb = accent_color
+        shape.line.color.rgb = accent_color
+    
+    # Set title
+    title = slide.shapes.title
+    title.text = slide_info["title"]
+    title.text_frame.paragraphs[0].font.bold = True
+    title.text_frame.paragraphs[0].font.size = Pt(40)
+    title.text_frame.paragraphs[0].font.color.rgb = title_color
+    
+    # Set body content for non-title slides
+    if not slide_info["is_title"]:
+        body = slide.placeholders[1]
+        body.text = slide_info["content"]
+        for paragraph in body.text_frame.paragraphs:
+            paragraph.font.size = Pt(28)
+            paragraph.font.color.rgb = body_color
+
+# Save presentation
+pptx_file_updated = "/mnt/data/Algebraic_Expressions_PPT_Updated.pptx"
+prs.save(pptx_file_updated)
+pptx_file_updated

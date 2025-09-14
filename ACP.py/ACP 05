@@ -1,0 +1,7 @@
+# Get the temperature
+
+temp = int(input("enter the temperature")) 
+if temp > 15:
+    print(temp,"wear a sunglass")
+else:
+    print(temp,"wear a sweater")
