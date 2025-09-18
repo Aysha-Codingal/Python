@@ -1,7 +1,12 @@
-# Get the temperature
+# SUMMER TIMES
 
-temp = int(input("enter the temperature")) 
-if temp > 15:
-    print(temp,"wear a sunglass")
+temperature = float(input("Enter the temperature in °C: "))
+
+if temperature > 30:
+    print("It's very hot! Wear light cotton clothes and drink lots of water.")
+elif temperature > 20:
+    print("The weather is warm. Perfect for T-shirts and shorts.")
+elif temperature > 10:
+    print("It's getting a bit cool. You might need a light jacket.")
 else:
-    print(temp,"wear a sweater")
+    print("It's cold. Wear warm clothes like jackets and pullovers.")
