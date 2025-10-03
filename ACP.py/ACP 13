@@ -1,0 +1,19 @@
+import math
+
+def calculate_circumference(radius):
+  """
+  Calculates the circumference of a circle.
+
+  Args:
+    radius: The radius of the circle.
+
+  Returns:
+    The circumference of the circle.
+  """
+  circumference = 2 * math.pi * radius
+  return circumference
+
+radius_of_circle = 5
+circumference_result = calculate_circumference(radius_of_circle)
+
+print(f"The circumference of a circle with radius {radius_of_circle} is {circumference_result:.2f}")
