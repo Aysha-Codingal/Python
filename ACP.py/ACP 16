@@ -1,0 +1,9 @@
+# Age counter
+try:
+    age = int(input("enter the age of the user"))
+    if age % 2 == 0:
+        print("the given age is even age")
+    else:
+        print("the given age is odd")
+except ValueError as e:
+    print("Error occured", e)

@@ -1,0 +1,5 @@
+import math
+
+print("The sine value",math.sin(1))
+print("The cos value",math.cos(-1))
+print("The tan value",math.tan(180))
