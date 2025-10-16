@@ -1,0 +1,10 @@
+# Word Matching
+def word_matching(mylist):
+    count = 0
+    for word in mylist:
+        if word[0] == word[-1]:
+            count+=1
+    print("the given list /n ",mylist)                  
+    print("the words which has the first and last characters same are : ",count)
+mylist = ['cup','mom','civic','retain','acacia']    
+word_matching(mylist)
