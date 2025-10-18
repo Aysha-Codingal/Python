@@ -1,0 +1,14 @@
+# Months
+
+my_list = ['A', 'B', 'C', 4, 5]
+
+my_list.append('D') 
+
+my_list.remove('B') 
+
+popped_item = my_list.pop(0) 
+
+my_list.reverse() 
+
+print(f"Final List: {my_list}") 
+print(f"Removed Item: {popped_item}")

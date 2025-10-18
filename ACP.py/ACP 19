@@ -1,0 +1,25 @@
+# Square it out !
+
+start_number = int(input("Enter a starting number (e.g., 1): "))
+end_number = int(input("Enter an ending number (e.g., 10): "))
+
+all_squares = [] 
+
+for number in range(start_number, end_number + 1):
+    square = number * number 
+    all_squares.append(square) 
+
+print(f"\nAll Squares: {all_squares}")
+
+odd_squares = []   
+even_squares = [] 
+
+for s in all_squares:
+    if s % 2 == 0:
+        even_squares.append(s)
+    else:
+        odd_squares.append(s)
+
+print("---------------------------------------")
+print("Odd Square values:  ", odd_squares)
+print("Even Square values: ", even_squares)

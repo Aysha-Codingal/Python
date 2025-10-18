@@ -1,0 +1,9 @@
+# Tuple product
+
+def product_tuple(t):
+    p = 1
+    for x in t:
+        p *= x
+    return p
+
+print("The total products of the tuple is  ",product_tuple((10,32,34,12)))     
