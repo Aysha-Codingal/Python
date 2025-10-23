@@ -1,0 +1,14 @@
+# Set Intersection
+s1 = {'red','blue','green'}
+s2 = {'violet','orange','green'}
+
+print(s1)
+print(s2)
+print("union of sets")
+print(s1.union(s2))
+
+print("intersection of sets")
+print(s1.intersection(s2))
+
+print("difference of sets")
+print(s1.difference(s2))
