@@ -1,0 +1,23 @@
+def count_value_frequency(test_dict):
+    
+    frequency_dict = {}
+    
+    for value in test_dict.values():
+        
+        frequency_dict[value] = frequency_dict.get(value, 0) + 1
+        
+    return frequency_dict
+
+my_dictionary = {
+    'A': 10, 
+    'B': 20, 
+    'C': 10, 
+    'D': 30, 
+    'E': 20,
+    'F': 10
+}
+
+result = count_value_frequency(my_dictionary)
+
+print(f"Original Dictionary: {my_dictionary}")
+print(f"Value Frequencies: {result}")

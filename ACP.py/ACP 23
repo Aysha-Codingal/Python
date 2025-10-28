@@ -1,0 +1,6 @@
+numbers = [1, 2, 3, 4, 5]
+
+squared_list = [n * n for n in numbers]
+
+print(f"Original List: {numbers}")
+print(f"Squared List: {squared_list}")
