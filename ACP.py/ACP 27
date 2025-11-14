@@ -1,0 +1,14 @@
+class Vehicle:
+    def __init__(self, capacity):
+        self.capacity = capacity
+        self.base_fare = 100
+        
+    def calculate_fare(self):
+        return self.capacity * self.base_fare
+
+class Bus(Vehicle):
+    def calculate_fare(self):
+        return super().calculate_fare()
+
+bus1 = Bus(50) 
+print(f"Total Fare: ${bus1.calculate_fare()}")

@@ -1,0 +1,14 @@
+# Dog Breed 
+
+class Dog:
+    species = "Canis familiaris" 
+
+    def __init__(self, breed, name):
+        self.breed = breed  
+        self.name = name
+
+dog1 = Dog("Golden Retriever", "Buddy")
+dog2 = Dog("German Shepherd", "Max")
+
+print(f"Species: {dog1.species}, Breed: {dog1.breed}, Name: {dog1.name}")
+print(f"Species: {dog2.species}, Breed: {dog2.breed}, Name: {dog2.name}")
