@@ -1,0 +1,19 @@
+# Vehicle polymothisme
+
+class Ferrari:
+    def origin(self):
+        print("Ferrari's country of origin is Italy.")
+        
+class Ford:
+    
+    def origin(self):
+       
+        print("Ford's country of origin is the United States.")
+
+
+obj1 = Ferrari()
+obj2 = Ford()
+
+print("--- Vehicle Information ---")
+for car in (obj1, obj2):
+    car.origin()

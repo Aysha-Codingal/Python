@@ -1,0 +1,20 @@
+class StringReverse:
+    
+    def __init__(self, s):
+        self._input_string = s
+
+    def __str__(self):
+        words = self._input_string.split()
+        
+        reversed_words = []
+        
+        for word in words:
+            reversed_words.insert(0, word)
+
+        return " ".join(reversed_words)
+
+
+s_input = "I hate science alot 😝😝"
+string_reverse = StringReverse(s_input)
+
+print(string_reverse)
