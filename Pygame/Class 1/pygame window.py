@@ -11,5 +11,5 @@ while not done:
         if event.type ==Pygame.QUIT:
             Pygame.quit()
 
-    Pygame.display.flip()        
+    Pygame.display.flip()      
 
