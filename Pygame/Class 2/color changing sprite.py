@@ -15,7 +15,7 @@ while True:
     for event in pygame.event.get():
         if event.type == pygame. QUIT:
             quit()
-        pressed = pygame.key.get_pressed()    
+        pressed = pygame.key.get_pressed    
         if pressed[pygame.K_UP]:
             y = y - 5
         if pressed[pygame.K_DOWN]:
