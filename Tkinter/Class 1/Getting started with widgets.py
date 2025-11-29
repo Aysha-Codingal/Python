@@ -4,7 +4,7 @@ from datetime import date
 root = Tk()
 root.title("My First Window")
 root.geometry("400x300")
-root.configure(bg='magenta')
+root.configure(bg='pink')
 
 def greet():
     name = entry1.get()
@@ -13,7 +13,7 @@ def greet():
     text1.delete("1.0","end")
     text1.insert("1.0",g)
 f = ("Times",20,'bold')
-label1 = Label(root,text = "Name ", bg = 'magenta', fg ='black',font=f)
+label1 = Label(root,text = "Name ", bg = 'pink', fg ='black',font=f)
 label1.pack(pady=10)
 entry1 = Entry(root)
 entry1.pack(pady=10)
