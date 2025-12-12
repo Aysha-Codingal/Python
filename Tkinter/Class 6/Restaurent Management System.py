@@ -79,8 +79,8 @@ enterytotal = Entry(frame1,)
 enterytotal.grid(row = 7, column =3,padx=10,pady=10)
 enterytotal.insert(END,0)
 
-
 #----------------------------------------------------------------------------------------------------------------
+
 def ex():
     root.destroy()
 def reset():
