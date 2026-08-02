@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💡ELECTRICITY BILL ESTIMATOR💡</title>
+</head>
+<body>
+  
+    <h1>💡ELECTRICITY BILL ESTIMATOR💡</h1>
+    <p>Enter Your Monthly Units To Find Out You Electricity Bill!</p>
+
+    <form action = "/calculate" method ="POST">
+        <label>🔌 Units Consumed:</label>
+        <input type = "number" name = "units" placeholder ="e.g. 150" required>
+        <button type ="Submit">Calculate 💡</button>
+    </form>
+
+    {% if bill %}
+    <div class = "result">
+        <h2>Units Used: {{ units }} kWh</h2>
+        <h2>Total Bill: MVR {{ bill }}</h2>
+        <p>{{ messege }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>
