@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⛅WEATHER APPLICATION🌦️</title>
+</head>
+<body>
+    <h1>⛅WEATHER APPLICATION🌦️</h1>
+    <form action="/weather" method="POST">
+        <input type = "text" name = "city">
+        <input type="submit" value="Get Weather">
+    </form>
+
+    {% if weather %}
+        <div class = "card">
+        <h1>{{weather.location}}</h1>
+        <h2>{{weather.country_code}}</h2>
+        <p><b>Temprature:</b> {{ weather.temperature}} °C</p>
+        </div>
+    {% elif error %}    
+        <p style="color:red;">{{ error }}</p>
+        {% endif %}
+</body>
+</html>
