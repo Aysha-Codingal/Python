@@ -21,7 +21,7 @@ def weather():
     if data["cod"] != "404":
         weather_data = {
             "country_code": data['sys']['country'],
-            "temprature": data["main"]["temp"],
+            "temperature": data["main"]["temp"],
             "location": data["name"],
         } 
 
