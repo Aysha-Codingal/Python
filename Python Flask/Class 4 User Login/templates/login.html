@@ -14,11 +14,11 @@
             <button type="submit">Login</button>
         </form>
         <p>Don't have an account? <a href="{{ url_for('signup') }}">Sign Up</a></p>
-        {% with messeges = get_flashed_messeges() %}
-            {% if messeges %}
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
                 <ul>
-                    {% for messeges in messeges %}
-                        <li>{{ messeges }}</li>
+                    {% for messages in messages %}
+                        <li>{{ messages }}</li>
                     {% endfor%}    
                 </ul>
             {% endif %}  
