@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculate Number of Vowels</title>
+</head>
+<body>
+    <h2>Calculate Number of Vowels in Given String</h2>
+
+    <form method="POST" action="/">
+        <label>Enter String:</label>
+        <input type="text" name="text" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if count is defined %}
+        <h3>Entered Text: {{ text }}</h3>
+        <h3>Number of Vowels: {{ count }}</h3>
+    {% endif %}
+</body>
+</html>
