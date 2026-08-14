@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Creater</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+    </style>
+
+</head>
+<body>
+
+    <h2>Fill Your Details</h2>
+
+    <form action="/resume" method="POST">
+        <p>
+            <label>Full Name:</label><br>
+            <input type="text" name="name" placeholder="Enter full name" required>
+        </p>
+
+        <p>
+            <label>Email Address:</label><br>
+            <input type="email" name="email" placeholder="Enter email address" required>
+        </p>
+
+        <p>
+            <label>Skills:</label><br>
+            <input type="text" name="skills" placeholder="e.g. Python, Flask, HTML">
+        </p>
+
+        <p>
+            <label>About Me:</label><br>
+            <textarea name="about" rows="4" placeholder="Write a short summary..."></textarea>
+        </p>
+
+        <button type="submit">Create Resume</button>
+    </form>
+
+</body>
+</html>
