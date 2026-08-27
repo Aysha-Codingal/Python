@@ -1,14 +1,12 @@
 import re, random
 from colorama import Fore, init
 
-# Initialize colorama (autoreset ensures each print resets after use)
 init(autoreset=True)
 
-# Destination & joke data
 destinations = {
     "beaches": ["Bali", "Maldives", "Phuket"],
     "mountains": ["Swiss Alps", "Rocky Mountains", "Himalayas"],
-    "cities": ["Tokyo", "Paris", "Abu Dhabi"]
+    "cities": ["Tokyo", "Paris", "New York"]
 }
 
 def normalize_input(text):
@@ -54,7 +52,6 @@ def chat():
             break
         else:
             print(Fore.RED + "TravelBot: Could you rephrase?")
-
 
 if __name__ == "__main__":
     chat()

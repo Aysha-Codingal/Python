@@ -91,6 +91,4 @@ while True:
         neutral_count += 1
 
     conversation_history.append((user_input, polarity, sentiment))
-    print(
-        f"{Fore.BLUE}SENTIMENT: {sentiment} | Polarity Score: {polarity:.2f}{Style.RESET_ALL}\n"
-    )
+    print("{Fore.BLUE}SENTIMENT: {sentiment} | Polarity Score: {polarity:.2f}{Style.RESET_ALL}\n")
