@@ -3,7 +3,6 @@ name = input()
 
 print(f"Nice to meet you, {name}!")
 
-# Ask about their day
 print("How's your day going so far? (good/bad/okay) : ")
 mood = input().lower()
 
