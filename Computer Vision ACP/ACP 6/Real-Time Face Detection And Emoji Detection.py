@@ -20,9 +20,9 @@ while True:
         smiles = smile_cascade.detectMultiScale(face_gray, 1.8, 20)
 
         if len(smiles) > 0:
-            emotion, color = "Happy :)", (0, 255, 0)
+            emotion, color = "Happy :-)", (0, 255, 0)
         else:
-            emotion, color = "Neutral :|", (0, 165, 255)
+            emotion, color = "Neutral :-|", (0, 165, 255)
 
         cv2.rectangle(frame, (x, y), (x+w, y+h), color, 2)
         cv2.putText(frame, emotion, (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.8, color, 2)
